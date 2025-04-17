@@ -1,7 +1,5 @@
-export const Main = () => {
+export const Main = ({ children }) => {
   return (
-    <p>
-      I am a main
-    </p>
+    <div>{children}</div>
   );
 }

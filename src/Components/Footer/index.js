@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
-    <p>
+    <section>
       I am a Footer
-    </p>
+    </section>
   );
 }

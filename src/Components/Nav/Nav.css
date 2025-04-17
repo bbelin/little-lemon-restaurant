@@ -1,0 +1,19 @@
+.main-header nav {
+  height: 100%;
+  align-content: center;
+}
+
+.main-header nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header nav li {
+  color: salmon;
+  font-family: 'Markazi Text';
+  color: var(--color-primary-1);
+  font-size: 32;
+}

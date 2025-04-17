@@ -1,7 +1,7 @@
+import image from '../assets/Logo.svg'
+
 export const Logo = () => {
   return (
-    <div className='App-logo'>
-      I am a logo
-    </div>
-  );
+    <img src={image} alt='logo' />
+  )
 }
