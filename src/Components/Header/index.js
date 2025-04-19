@@ -7,16 +7,16 @@ import './Header.css'
 
 export const Header = () => {
   return (
-    <header className='grid main-header'>
-      <div className='grid-col-2-desktop'>
+    <header className='grid-container main-header'>
+      <div className='desk-col-2'>
       </div>
-      <div className='grid-col-2-desktop'>
+      <div className='desk-col-2'>
         <Logo />
       </div>
-      <div className='grid-col-6-desktop'>
+      <div className='desk-col-6'>
         <Nav />
       </div>
-      <div className='grid-col-2-desktop'>
+      <div className='desk-col-2'>
       </div>
     </header>
   );

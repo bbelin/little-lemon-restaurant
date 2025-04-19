@@ -34,23 +34,23 @@ const specials = [
 export const Specials = () => {
   return (
     <section className='component-section specials'>
-      <div className='grid'>
-        <div className="grid-col-2-desktop"></div>
-        <div className="grid-col-8-desktop title-wrapper">
+      <div className='grid-container'>
+        <div className="desk-col-2"></div>
+        <div className="desk-col-8 title-wrapper">
           <h2>This Week Specials</h2>
           <Button>Online Menu</Button>
         </div>
-        <div className="grid-col-2-desktop"></div>
+        <div className='desk-col-2'></div>
       </div>
-      <div className='grid'>
-        <div className="grid-col-2-desktop"></div>
-        <div className="grid-col-8-desktop">
+      <div className='grid-container'>
+        <div className='desk-col-2'></div>
+        <div className='desk-col-8'>
           <ul>
             {specials.map((special, idx) => {
               return <li key={idx}><SpecialCard name={special.name} price={special.price} body={special.body} image={special.image} /></li>
             })}
           </ul>
-          <div className="grid-col-2-desktop"></div>
+          <div className='desk-col-2'></div>
       </div>
       </div>
     </section>
