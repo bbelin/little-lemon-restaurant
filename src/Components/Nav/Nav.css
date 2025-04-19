@@ -20,4 +20,5 @@
 
 .main-header nav a:hover {
   text-decoration: underline;
+  transition: text-decoration .2s ease-in;
 }
