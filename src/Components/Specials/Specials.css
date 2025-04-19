@@ -1,0 +1,16 @@
+.specials .title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.specials ul {
+  display: flex;
+  gap: 48px;
+  list-style-type: none;
+}
+
+.specials li {
+  flex: 1;
+}

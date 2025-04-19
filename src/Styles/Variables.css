@@ -1,8 +1,22 @@
 :root {
+  /* colors */
   --color-primary-1: #495E57;
   --color-primary-2: #F4CE14;
   --color-secondary-1: #EE9972;
   --color-secondary-2: #FBDABB;
   --color-secondary-3: #EDEFEE;
+  --color-secondary-3-20: #EDEFEE51;
   --color-secondary-4: #333;
+  --color-white: #fff;
+
+  /* borders */
+  --boreder-radius-md: 16px;
+  --boreder-radius-l: 24px;
+
+  /* specials card */
+  --specials-card-padding: 24px;
+
+  /* box shadows */
+  --box-shadow-default: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 }

@@ -11,9 +11,13 @@
   align-items: center;
 }
 
-.main-header nav li {
-  color: salmon;
+.main-header nav a {
   font-family: 'Markazi Text';
   color: var(--color-primary-1);
-  font-size: 32;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.main-header nav a:hover {
+  text-decoration: underline;
 }

@@ -1,0 +1,13 @@
+button {
+  padding: 12px 32px;
+  background-color: var(--color-primary-2);
+  border-radius: var(--boreder-radius-md);
+  border: none;
+  font-weight: 900;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(0.85);
+  transition: filter .2s ease-in;
+}

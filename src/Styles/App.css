@@ -1,5 +1,13 @@
+body {
+  font-family: 'Karla';
+  font-weight: 400;
+  color: var(--color-secondary-4);
+  line-height: normal;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Markazi Text";
+  font-weight: 400;
 }
 
 h2 {
@@ -8,4 +16,12 @@ h2 {
 
 h3 {
   font-size: 48px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+.component-section {
+  padding: 40px 0;
 }
