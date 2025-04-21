@@ -35,8 +35,8 @@ export const Specials = () => {
   return (
     <section className='component-section specials'>
       <div className='grid-container'>
-        <div className="desk-col-2"></div>
-        <div className="desk-col-8 title-wrapper">
+        <div className='desk-col-2'></div>
+        <div className='desk-col-8 title-wrapper'>
           <h2>This Week Specials</h2>
           <Button>Online Menu</Button>
         </div>

@@ -24,13 +24,13 @@ export const CustomersSay = () => {
   return (
     <section className='component-section customers-say'>
       <div className='grid-container'>
-        <div className="desk-col-2"></div>
-        <div className="desk-col-8">
+        <div className='desk-col-2'></div>
+        <div className='desk-col-8'>
           <h2>What Customers Say</h2>
         </div>
       </div>
       <div className='grid-container'>
-        <div className="desk-col-2"></div>
+        <div className='desk-col-2'></div>
         {reviews.map(({name, image, review}, idx) => {
           return (
             <div className='desk-col-4' key={idx}>

@@ -1,28 +1,44 @@
 import { Link } from 'react-router-dom';
 import './Nav.css';
 
+const navElements = [
+  {
+    text: 'Home',
+    navigatesTo: '/'
+  },
+  {
+    text: 'About',
+    navigatesTo: '/about'
+  },
+  {
+    text: 'Menu',
+    navigatesTo: '/menu'
+  },
+  {
+    text: 'Reservations',
+    navigatesTo: '/reservations'
+  },
+  {
+    text: 'Order Online',
+    navigatesTo: '/order-online'
+  },
+  {
+    text: 'Login',
+    navigatesTo: '/login'
+  }
+]
+
 export const Nav = () => {
   return (
     <nav>
       <ul className='navigation'>
-        <li>
-          <Link to='/'>Home</Link>
-        </li>
-        <li>
-          <Link to='/about'>About</Link>
-        </li>
-        <li>
-          <Link to='/menu'>Menu</Link>
-        </li>
-        <li>
-          <Link to='/reservations'>Reservations</Link>
-        </li>
-        <li>
-          <Link to='/order-online'>Order Online</Link>
-        </li>
-        <li>
-          <Link to='/login'>Login</Link>
-        </li>
+        {navElements.map(({ navigatesTo, text }, idx) => {
+          return (
+            <li>
+              <Link to={navigatesTo}>{text}</Link>
+            </li>
+          )
+        })}
       </ul>
     </nav>
   );
