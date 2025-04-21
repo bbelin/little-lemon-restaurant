@@ -1,5 +1,5 @@
 // Components
-import { SpecialCard } from '../SpecialCard'
+import { SpecialsCard } from '../SpecialsCard'
 import { Button } from '../Button'
 
 // Styles
@@ -46,8 +46,8 @@ export const Specials = () => {
         <div className='desk-col-2'></div>
         <div className='desk-col-8'>
           <ul>
-            {specials.map((special, idx) => {
-              return <li key={idx}><SpecialCard name={special.name} price={special.price} body={special.body} image={special.image} /></li>
+            {specials.map(({ name, price, body, image }, idx) => {
+              return <li key={idx}><SpecialsCard name={name} price={price} body={body} image={image} /></li>
             })}
           </ul>
           <div className='desk-col-2'></div>

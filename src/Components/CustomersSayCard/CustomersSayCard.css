@@ -1,0 +1,32 @@
+.customer-says-card {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: var(--color-white);
+  border-radius: var(--boreder-radius-sm);
+  box-shadow: var(--box-shadow-default);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.customer-says-card > div {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.customer-says-card p {
+  margin-bottom: 24px;
+}
+
+.customer-says-card .customer-info {
+  display: flex;
+  align-items: center;
+}
+
+.customer-says-card img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 99px;
+  display: inline-block;
+  margin-right: 24px;
+}

@@ -5,15 +5,15 @@
 
 .hero h2 {
   color: var(--color-primary-2);
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .hero h3 {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .hero p {
-  padding-bottom: 52px;
+  margin-bottom: 52px;
   font-weight: 200;
   max-width: 75%;
 }

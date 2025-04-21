@@ -6,10 +6,12 @@
   --color-secondary-2: #FBDABB;
   --color-secondary-3: #EDEFEE;
   --color-secondary-3-20: #EDEFEE51;
+  --color-secondary-3-60: #EDEFEE99;
   --color-secondary-4: #333;
   --color-white: #fff;
 
   /* borders */
+  --boreder-radius-sm: 8px;
   --boreder-radius-md: 16px;
   --boreder-radius-l: 24px;
 

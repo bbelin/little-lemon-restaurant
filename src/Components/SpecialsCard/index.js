@@ -2,11 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
 
 // Styles
-import './SpecialCard.css';
+import './SpecialsCard.css';
 
-export const SpecialCard = ({ image, name, price, body }) => {
+export const SpecialsCard = ({ image, name, price, body }) => {
   return (
-    <div className='special-card'>
+    <div className='specials-card'>
       <img src={image} alt='restaurant food' />
       <div>
         <header>
