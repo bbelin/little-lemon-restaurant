@@ -18,10 +18,18 @@ h3 {
   font-size: 48px;
 }
 
+h4 {
+  font-size: 24px;
+}
+
 h5 {
   font-size: 20px;
 }
 
 .component-section {
   padding: 40px 0;
+}
+
+img {
+  width: 100%;
 }

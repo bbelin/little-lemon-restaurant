@@ -1,0 +1,8 @@
+.main-footer {
+  background-color: var(--color-secondary-4);
+  color: var(--color-secondary-3);
+}
+
+.main-footer ul {
+  list-style-type: none;
+}
