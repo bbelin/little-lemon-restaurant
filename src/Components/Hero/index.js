@@ -14,7 +14,7 @@ export const Hero = () => {
           <h2>Little Lemon</h2>
           <h3>Chicago</h3>
           <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <Button>Reserve a Table</Button>
+          <Button navigateTo='/reservations'>Reserve a Table</Button>
         </div>
         <div className='desk-col-4 image-wrapper'>
           <img src={image} alt='restaurant food' />

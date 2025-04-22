@@ -15,8 +15,8 @@ export const Header = () => {
       </div>
       <div className='desk-col-6'>
         <Nav />
-      </div>
       <div className='desk-col-2'>
+      </div>
       </div>
     </header>
   );

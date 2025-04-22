@@ -38,7 +38,7 @@ export const Specials = () => {
         <div className='desk-col-2'></div>
         <div className='desk-col-8 title-wrapper'>
           <h2>This Week Specials</h2>
-          <Button>Online Menu</Button>
+          <Button navigateTo={'/menu'}>Online Menu</Button>
         </div>
         <div className='desk-col-2'></div>
       </div>

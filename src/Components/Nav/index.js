@@ -34,7 +34,7 @@ export const Nav = () => {
       <ul className='navigation'>
         {navElements.map(({ navigatesTo, text }, idx) => {
           return (
-            <li>
+            <li key={idx}>
               <Link to={navigatesTo}>{text}</Link>
             </li>
           )
