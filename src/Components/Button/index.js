@@ -14,5 +14,5 @@ export const Button = ({ navigateTo, children }) => {
 
   return (
     <button onClick={(e) => clickHandler(e)}>{children}</button>
-  );
+  )
 }

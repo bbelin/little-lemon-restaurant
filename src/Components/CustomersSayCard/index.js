@@ -12,5 +12,5 @@ export const CustomersSayCard = ({ name, review, image }) => {
         </div>
       </div>
     </div>
-  );
+  )
 }
