@@ -1,32 +1,15 @@
-import { useState } from 'react'
-
 // Styles
 import './BookingForm.css'
 
-export const BookingForm = () => {
-  const tomorrowsDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
-  const day = tomorrowsDate.getDate()
-  const month = tomorrowsDate.getMonth() + 1
-  const year = tomorrowsDate.getFullYear()
-  const initialDate = `${year}-${('0' + month).slice(-2)}-${('0' + day).slice(-2)}`
-  const [availableTimes, setAvailableTimes] = useState(['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'])
-  const [reservationData, setReservationData] = useState({
-    date: initialDate,
-    time: '20:00',
-    guests: '2',
-    occasion: 'Birthday'
-  })
-
-  const onFieldChange = (e, field) => {
-    e.preventDefault()
-    setReservationData(prevState => ({
-      ...prevState,
-      [field]: e.target.value
-    }))
-  }
+export const BookingForm = ({ reservationData, onFieldChange, availableTimes, dispatch }) => {
 
   const submitHandler = e => {
     e.preventDefault()
+  }
+
+  const onDateChange = e => {
+    dispatch({ type: 'update_times', payload: e.target.value })
+    onFieldChange(e, 'date')
   }
 
   return (
@@ -37,11 +20,11 @@ export const BookingForm = () => {
         <form submit={e => submitHandler(e)}>
           <div className='form-item'>
             <label htmlFor='res-date'>Choose date</label>
-            <input type='date' id='res-date' value={reservationData.date} onChange={e => onFieldChange(e, 'date')} />
+            <input type='date' id='res-date' value={reservationData.date} onChange={e => onDateChange(e)} />
           </div>
           <div className='form-item'>
             <label htmlFor='res-time'>Choose time</label>
-            <select id='res-time' value={reservationData.time} onChange={e => onFieldChange(e, 'time')}>
+            <select id='res-time' value={reservationData.time} onChange={onDateChange}>
               {availableTimes.map(time => <option value={time}>{time}</option>)}
             </select>
           </div>
