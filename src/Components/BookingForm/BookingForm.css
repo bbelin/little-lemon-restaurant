@@ -1,3 +1,38 @@
-.main-header {
-  padding: 10px 0;
+.booking-form {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.booking-form .form {
+  text-align: center;
+}
+
+.booking-form h2 {
+  margin-bottom: 16px;
+}
+
+.booking-form .form-item {
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  font-size: 18px;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.booking-form label span {
+  color: var(--color-error);
+}
+
+.booking-form input,
+.booking-form select {
+  box-sizing: border-box;
+  padding: 4px 8px;
+  width: 200px;
+}
+
+.booking-form button[type='submit'] {
+  margin-top: 32px;
 }
