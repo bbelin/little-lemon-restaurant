@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // Components
+import { Header } from './Components/Header'
 import { Home } from './Pages/Home'
 import { About } from './Pages/About'
 import { Login } from './Pages/Login'
@@ -16,17 +17,20 @@ import './Styles/App.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/order-online" element={<OrderOnline />} />
-        <Route path="/reservations" element={<Reservations />} />
-      </Routes>
-    </Router>
-  );
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/order-online" element={<OrderOnline />} />
+          <Route path="/reservations" element={<Reservations />} />
+        </Routes>
+      </Router>
+    </>
+  )
 }
 
 export default App;
