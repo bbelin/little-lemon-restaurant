@@ -45,11 +45,6 @@ export const Reservations = () => {
     onFieldChange(e, 'date')
   }
 
-  // useEffect(() => {
-  //   console.log(reservationData.date)
-  //   const result = fetchAPI(new Date(reservationData.date))
-  // }, [])
-
   return (
     <>
       <Main>
