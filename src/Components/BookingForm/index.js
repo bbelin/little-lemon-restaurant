@@ -16,7 +16,7 @@ export const BookingForm = ({ reservationData, onFieldChange, availableTimes, di
     <div className='grid-container booking-form'>
       <div className='desk-col-3'></div>
       <div className='desk-col-6 form'>
-        <h2>Reserve a table</h2>
+        <h2 id='booking-form-heading'>Reserve a table</h2>
         <form submit={e => submitHandler(e)}>
           <div className='form-item'>
             <label htmlFor='res-date'>Choose date</label>
@@ -24,7 +24,7 @@ export const BookingForm = ({ reservationData, onFieldChange, availableTimes, di
           </div>
           <div className='form-item'>
             <label htmlFor='res-time'>Choose time</label>
-            <select id='res-time' value={reservationData.time} onChange={onDateChange}>
+            <select id='res-time' value={reservationData.time} onChange={e => onFieldChange(e, 'time')}>
               {availableTimes.map(time => <option value={time}>{time}</option>)}
             </select>
           </div>
