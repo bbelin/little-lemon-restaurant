@@ -1,17 +1,20 @@
 import { useState, useReducer } from 'react'
+import { fetchAPI } from '../utils/fetchAPI'
 
 // Components
 import { Main } from '../Components/Main'
 import { BookingForm } from '../Components/BookingForm'
 import { Footer } from '../Components/Footer'
 
-export const initializeTimes = () => ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']
+export const initializeTimes = (initialDate) => {
+  return fetchAPI(new Date(initialDate))
+}
 export const updateTimes = (state, action) => {
   switch(action.type) {
     case 'update_times':
-      return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+      return fetchAPI(new Date(action.payload.value))
     default:
-      return state;
+      return state
   }
 }
 
@@ -21,11 +24,10 @@ export const Reservations = () => {
   const month = tomorrowsDate.getMonth() + 1
   const year = tomorrowsDate.getFullYear()
   const initialDate = `${year}-${('0' + month).slice(-2)}-${('0' + day).slice(-2)}`
-
-  const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes)
+  const [availableTimes, dispatch] = useReducer(updateTimes, initialDate, initializeTimes)
   const [reservationData, setReservationData] = useState({
     date: initialDate,
-    time: '20:00',
+    time: availableTimes[0],
     guests: '2',
     occasion: 'Birthday'
   })
@@ -38,6 +40,16 @@ export const Reservations = () => {
     }))
   }
 
+  const onDateChange = e => {
+    dispatch({ type: 'update_times', payload: { value: e.target.value } })
+    onFieldChange(e, 'date')
+  }
+
+  // useEffect(() => {
+  //   console.log(reservationData.date)
+  //   const result = fetchAPI(new Date(reservationData.date))
+  // }, [])
+
   return (
     <>
       <Main>
@@ -45,7 +57,7 @@ export const Reservations = () => {
           reservationData={reservationData}
           onFieldChange={onFieldChange}
           availableTimes={availableTimes}
-          dispatch={dispatch}
+          onDateChange={onDateChange}
         />
       </Main>
       <Footer />

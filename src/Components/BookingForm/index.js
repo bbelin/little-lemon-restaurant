@@ -1,15 +1,10 @@
 // Styles
 import './BookingForm.css'
 
-export const BookingForm = ({ reservationData, onFieldChange, availableTimes, dispatch }) => {
+export const BookingForm = ({ reservationData, onFieldChange, availableTimes, onDateChange }) => {
 
   const submitHandler = e => {
     e.preventDefault()
-  }
-
-  const onDateChange = e => {
-    dispatch({ type: 'update_times', payload: e.target.value })
-    onFieldChange(e, 'date')
   }
 
   return (
@@ -17,7 +12,7 @@ export const BookingForm = ({ reservationData, onFieldChange, availableTimes, di
       <div className='desk-col-3'></div>
       <div className='desk-col-6 form'>
         <h2 id='booking-form-heading'>Reserve a table</h2>
-        <form submit={e => submitHandler(e)}>
+        <form onSubmit={submitHandler}>
           <div className='form-item'>
             <label htmlFor='res-date'>Choose date</label>
             <input type='date' id='res-date' value={reservationData.date} onChange={e => onDateChange(e)} />
@@ -25,7 +20,7 @@ export const BookingForm = ({ reservationData, onFieldChange, availableTimes, di
           <div className='form-item'>
             <label htmlFor='res-time'>Choose time</label>
             <select id='res-time' value={reservationData.time} onChange={e => onFieldChange(e, 'time')}>
-              {availableTimes.map(time => <option value={time}>{time}</option>)}
+              {availableTimes.map((time, idx) => <option value={time} key={idx}>{time}</option>)}
             </select>
           </div>
           <div className='form-item'>

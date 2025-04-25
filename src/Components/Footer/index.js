@@ -30,12 +30,12 @@ export const Footer = () => {
         <div className='desk-col-1'></div>
         {footerItems.map(({ text, subItems }, idx) => {
           return (
-            <div className='desk-col-2'>
+            <div className='desk-col-2' key={idx}>
               <h4>{text}</h4>
               <ul>
                 {subItems.map((item, idx) => {
                   return (
-                    <li>
+                    <li key={idx}>
                       <p>{item}</p>
                     </li>
                   )
