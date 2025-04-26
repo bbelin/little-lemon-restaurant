@@ -1,10 +1,11 @@
 // Styles
 import './BookingForm.css'
 
-export const BookingForm = ({ reservationData, onFieldChange, availableTimes, onDateChange }) => {
+export const BookingForm = ({ reservationData, onFieldChange, availableTimes, onDateChange, submitForm }) => {
 
   const submitHandler = e => {
     e.preventDefault()
+    submitForm()
   }
 
   return (

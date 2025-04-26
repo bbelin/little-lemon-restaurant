@@ -8,6 +8,7 @@ import { Login } from './Pages/Login'
 import { Menu } from './Pages/Menu'
 import { OrderOnline } from './Pages/OrderOnline'
 import { Reservations } from './Pages/Reservations'
+import { ConfirmedBooking } from './Pages/ConfirmedBooking'
 
 // Styles
 import './Styles/Reset.css';
@@ -21,12 +22,13 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/order-online" element={<OrderOnline />} />
-          <Route path="/reservations" element={<Reservations />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/order-online' element={<OrderOnline />} />
+          <Route path='/reservations' element={<Reservations />} />
+          <Route path='/confirmed-booking' element={<ConfirmedBooking />} />
         </Routes>
       </Router>
     </>

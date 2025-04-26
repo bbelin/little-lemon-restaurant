@@ -1,24 +1,15 @@
 import { useState, useReducer } from 'react'
-import { fetchAPI } from '../utils/fetchAPI'
+import { submitAPI } from '../../utils/fetchAPI'
+import { useNavigate } from 'react-router-dom'
+import { initializeTimes, updateTimes } from './helpers'
 
 // Components
-import { Main } from '../Components/Main'
-import { BookingForm } from '../Components/BookingForm'
-import { Footer } from '../Components/Footer'
-
-export const initializeTimes = (initialDate) => {
-  return fetchAPI(new Date(initialDate))
-}
-export const updateTimes = (state, action) => {
-  switch(action.type) {
-    case 'update_times':
-      return fetchAPI(new Date(action.payload.value))
-    default:
-      return state
-  }
-}
+import { Main } from '../../Components/Main'
+import { BookingForm } from '../../Components/BookingForm'
+import { Footer } from '../../Components/Footer'
 
 export const Reservations = () => {
+  const navigate = useNavigate()
   const tomorrowsDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
   const day = tomorrowsDate.getDate()
   const month = tomorrowsDate.getMonth() + 1
@@ -45,6 +36,12 @@ export const Reservations = () => {
     onFieldChange(e, 'date')
   }
 
+  const submitForm = () => {
+    console.log('here')
+    const isSuccessful = submitAPI(reservationData)
+    if (isSuccessful) navigate('/confirmed-booking')
+  }
+
   return (
     <>
       <Main>
@@ -53,6 +50,7 @@ export const Reservations = () => {
           onFieldChange={onFieldChange}
           availableTimes={availableTimes}
           onDateChange={onDateChange}
+          submitForm={submitForm}
         />
       </Main>
       <Footer />
