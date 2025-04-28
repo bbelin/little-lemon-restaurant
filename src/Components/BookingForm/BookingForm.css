@@ -12,7 +12,18 @@
 }
 
 .booking-form .form-item {
+  position: relative;
   margin-bottom: 20px;
+}
+
+.booking-form input,
+.booking-form select {
+  position: relative;
+}
+
+.error-message {
+  margin-top: 4px;
+  color: var(--color-error);
 }
 
 .booking-form label {
@@ -20,10 +31,6 @@
   display: block;
   font-weight: 700;
   margin-bottom: 4px;
-}
-
-.booking-form label span {
-  color: var(--color-error);
 }
 
 .booking-form input,

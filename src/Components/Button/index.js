@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 // Styles
 import './Button.css'
 
-export const Button = ({ navigateTo, children }) => {
+export const Button = ({ navigateTo, children, classes, type, isDisabled }) => {
   const navigate = useNavigate()
   const clickHandler = e => {
     if (navigateTo) {
@@ -13,6 +13,13 @@ export const Button = ({ navigateTo, children }) => {
   }
 
   return (
-    <button onClick={(e) => clickHandler(e)}>{children}</button>
+    <button
+      disabled={isDisabled}
+      onClick={(e) => clickHandler(e)}
+      className={`${classes ? classes : ''}`}
+      type={`${type ? type : ''}`}
+    >
+      {children}
+    </button>
   )
 }

@@ -1,7 +1,8 @@
 import { fetchAPI } from '../../utils/fetchAPI'
 
 export const initializeTimes = (initialDate) => {
-  return fetchAPI(new Date(initialDate))
+  const times = fetchAPI(new Date(initialDate))
+  return ['Select time', ...times]
 }
 
 export const updateTimes = (state, action) => {
