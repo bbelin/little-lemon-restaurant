@@ -23,8 +23,8 @@ export const BookingForm = ({ reservationData, onFieldChange, availableTimes, on
             {formErrors.date && <p className='error-message'>{formErrors.date}</p>}
           </div>
           <div className='form-item time'>
-            <label htmlFor='res-time'>Please choose time</label>
-            <select id='res-time' value={reservationData.time} onChange={e => onFieldChange(e, 'time')}>
+            <label htmlFor='res-time'>Choose time</label>
+            <select id='res-time' data-testid='res-time' value={reservationData.time} onChange={e => onFieldChange(e, 'time')}>
               {availableTimes.map((time, idx) => <option key={idx + 1}>{time}</option>)}
             </select>
             {formErrors.time && <p className='error-message'>{formErrors.time}</p>}
@@ -41,7 +41,7 @@ export const BookingForm = ({ reservationData, onFieldChange, availableTimes, on
             </select>
             {formErrors.occasion && <p className='error-message'>{formErrors.occasion}</p>}
           </div>
-          <Button type='submit'>Make Your reservation</Button>
+          <Button type='submit'>Make Your Reservation</Button>
         </form>
       </div>
     </div>

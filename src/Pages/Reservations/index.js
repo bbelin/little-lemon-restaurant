@@ -8,7 +8,7 @@ import { Main } from '../../Components/Main'
 import { BookingForm } from '../../Components/BookingForm'
 import { Footer } from '../../Components/Footer'
 
-const occasions = ['Select occasion', 'Anniversary', 'Birthday']
+export const occasions = ['Select occasion', 'Anniversary', 'Birthday']
 
 export const Reservations = () => {
   const navigate = useNavigate()
@@ -59,6 +59,7 @@ export const Reservations = () => {
     }
 
     setFormErrors(errors)
+
     return Object.keys(errors).length === 0
   }
 
