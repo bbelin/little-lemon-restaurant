@@ -7,7 +7,7 @@ import './SpecialsCard.css';
 export const SpecialsCard = ({ image, name, price, body }) => {
   return (
     <div className='specials-card'>
-      <img src={image} alt='restaurant food' />
+      <img className='mobile-hide' src={image} alt='restaurant food' />
       <div>
         <header>
           <h5>{name}</h5>
@@ -16,7 +16,7 @@ export const SpecialsCard = ({ image, name, price, body }) => {
         <p className='body'>{body}</p>
         <p className='order-delivery'>
           <span>Order a delivery</span>
-          <FontAwesomeIcon icon={faMotorcycle} />
+          <FontAwesomeIcon icon={faMotorcycle} className='test' />
         </p>
       </div>
     </div>

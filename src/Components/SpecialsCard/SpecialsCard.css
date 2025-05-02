@@ -11,7 +11,8 @@
 
 .specials-card > div {
   padding: 24px;
-  min-height: 294px;
+  padding-bottom: 56px;
+  min-height: 200px;
   position: relative;
   box-shadow: var(--box-shadow-default);
 }
@@ -47,4 +48,10 @@
 
 .specials-card .order-delivery span {
   padding-right: 16px;
+}
+
+@media (max-width: 767px) {
+  .specials-card > div {
+    min-height: auto;
+  }
 }

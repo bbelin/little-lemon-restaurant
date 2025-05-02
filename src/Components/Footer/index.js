@@ -23,14 +23,14 @@ export const Footer = () => {
   return (
     <section className='component-section main-footer'>
       <div className='grid-container'>
-        <div className='desk-col-2'></div>
-        <div className='desk-col-1'>
+        <div className='col-4 tab-col-8 desk-col-2'></div>
+        <div className='mobile-hide tablet-hide desk-col-1'>
           <img src={logoWhite} alt='logo' />
         </div>
-        <div className='desk-col-1'></div>
+        <div className='col-4 tab-col-8 desk-col-1'></div>
         {footerItems.map(({ text, subItems }, idx) => {
           return (
-            <div className='desk-col-2' key={idx}>
+            <div className='col-1 tab-col-2 desk-col-2' key={idx}>
               <h4>{text}</h4>
               <ul>
                 {subItems.map((item, idx) => {
@@ -45,9 +45,6 @@ export const Footer = () => {
             </div>
           )
         })}
-        {/* <div className='desk-col-2'></div>
-        <div className='desk-col-2'></div>
-        <div className='desk-col-2'></div> */}
       </div>
     </section>
   )

@@ -14,3 +14,9 @@
 .specials li {
   flex: 1;
 }
+
+@media (max-width: 767px) {
+  .specials ul {
+    flex-direction: column;
+  }
+}

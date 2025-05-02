@@ -35,16 +35,16 @@ export const Specials = () => {
   return (
     <section className='component-section specials'>
       <div className='grid-container'>
-        <div className='desk-col-2'></div>
-        <div className='desk-col-8 title-wrapper'>
+        <div className='col-4 tab-col-8 desk-col-2'></div>
+        <div className='col-4 tab-col-8 desk-col-8 title-wrapper'>
           <h2>This Week Specials</h2>
           <Button navigateTo={'/menu'}>Online Menu</Button>
         </div>
         <div className='desk-col-2'></div>
       </div>
       <div className='grid-container'>
-        <div className='desk-col-2'></div>
-        <div className='desk-col-8'>
+        <div className='col-4 tab-col-8 desk-col-2'></div>
+        <div className='col-4 tab-col-8 desk-col-8'>
           <ul>
             {specials.map(({ name, price, body, image }, idx) => {
               return <li key={idx}><SpecialsCard name={name} price={price} body={body} image={image} /></li>
