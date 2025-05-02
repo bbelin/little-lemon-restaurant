@@ -13,8 +13,8 @@ export const BookingForm = ({ reservationData, onFieldChange, availableTimes, on
 
   return (
     <div className='grid-container booking-form'>
-      <div className='desk-col-3'></div>
-      <div className='desk-col-6 form'>
+      <div className='col-4 tab-col-8 desk-col-3'></div>
+      <div className='col-4 tab-col-8 desk-col-6 form'>
         <h2 id='booking-form-heading'>Reserve a table</h2>
         <form onSubmit={submitHandler}>
           <div className={`form-item date ${formErrors.date ? 'error' : ''}`}>

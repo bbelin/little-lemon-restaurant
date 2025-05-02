@@ -79,7 +79,7 @@ img {
 }
 
 @media (min-width: 992px) {
-  .desk-hide {
+  .desktop-hide {
     display: none;
   }
 }
