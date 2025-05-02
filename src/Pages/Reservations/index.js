@@ -22,7 +22,7 @@ export const Reservations = () => {
   const [reservationData, setReservationData] = useState({
     date: initialDate,
     time: availableTimes[0],
-    guests: '2',
+    guests: '0',
     occasion: occasions[0]
   })
 

@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { Reservations } from '../Reservations'
 import { fetchAPI, submitAPI } from '../../utils/fetchAPI'
-import { MemoryRouter } from 'react-router-dom'
 
 // Mocks
 jest.mock('react-router-dom', () => ({
