@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Project
+
+# This is a Little Lemon Restaurant website which provides the ability to reserve a table
+
+# Designs
+
+A Figma file [url](https://www.figma.com/design/SvwnCcFsUq3brQfCQLVFue/Capstone-wireframe?node-id=0-1&t=aWYKH84S5VfD2dHi-1) with Brand Styles, Wireframe and Homepage design
+
 ## Available Scripts
 
 To run the project locally run
